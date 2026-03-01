@@ -43,6 +43,8 @@
 * Changed: EG4-LL BMS - Added CRC-16 checksum validation for all BMS reply frames by @tuxntoast
 * Changed: EG4-LL BMS - Added EG4AlarmManager class for threshold-based alarm evaluation with charge/discharge FET control by @tuxntoast
 * Changed: EG4-LL BMS - Fixed Protection class attribute names to match framework API (e.g. `high_voltage`, `low_cell_voltage`, `high_charge_temperature`) by @tuxntoast
+* Changed: EG4-LL BMS - Fixed unique identifier to append the BMS bus address integer to the serial number, ensuring uniqueness across daisy-chained units with similar serial numbers by @tuxntoast
+* Changed: EG4-LL BMS - Fixed CustomName to use zero-padded decimal bus address (e.g. `EG4-LL:01`, `EG4-LL:16`) for consistent labeling and correct device routing in Victron GUI by @tuxntoast
 * Changed: EG4-LL BMS - Fixed alarm state logger to reflect current protection values after dbus update, preventing stale Ok-Ok status in WARNING log events by @tuxntoast
 * Changed: EG4-LL BMS - Improved charge/discharge FET control so voltage and current alarms (over/under voltage, over current, short circuit) disable the FET on WARNING as well as PROTECTION, not only on PROTECTION by @tuxntoast
 * Changed: EG4-LL BMS - Improved serial port retry logic with automatic port recovery on SerialException by @tuxntoast
