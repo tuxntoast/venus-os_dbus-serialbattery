@@ -44,6 +44,7 @@
 * Changed: EG4-LL BMS - Added EG4AlarmManager class for threshold-based alarm evaluation with charge/discharge FET control by @tuxntoast
 * Changed: EG4-LL BMS - Fixed Protection class attribute names to match framework API (e.g. `high_voltage`, `low_cell_voltage`, `high_charge_temperature`) by @tuxntoast
 * Changed: EG4-LL BMS - Improved serial port retry logic with automatic port recovery on SerialException by @tuxntoast
+* Changed: EG4-LL BMS - Improved USB-RS485 (CH341) connection reliability on startup by keeping the serial port open between retry attempts, adding a 60-second connection timeout loop, and disabling DTR/RTS hardware flow control to prevent adapter resets by @tuxntoast
 * Changed: Exit behavior for excluded devices to behave like Victron services by @mr-manuel
 * Changed: Fix dbus connection leak which fixes problems on systems which multiple batteries with https://github.com/mr-manuel/venus-os_dbus-serialbattery/pull/402 by @cgoudie
 * Changed: Fix issue with published JsonData, where None values were published as empty strings by @mr-manuel
